@@ -14,8 +14,8 @@ class CaptchaController extends Controller
         return \Redirect::route('rabbitcms.captcha.image', ['id' => \Crypt::encrypt(Str::random(5))]);
     }
 
-    public function getCaptcha($id)
+    public function getCaptcha()
     {
-        //return Captcha::create();
+        return Captcha::image();
     }
 }
